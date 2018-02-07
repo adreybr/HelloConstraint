@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:weightSum="1"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="showToast"
+        android:rotation="90"
+        android:text="@string/button_label_toast"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toRightOf="@+id/show_count"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="@+id/show_count"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_countUp" />
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="155dp"
+        android:layout_height="320dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="@string/count_initial_value"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/count_text_size"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/button_countUp"
+        android:layout_width="157dp"
+        android:layout_height="57dp"
+        android:background="@color/colorCountUp"
+        android:onClick="countUp"
+        android:text="@string/button_label_countUp"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="114dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/show_count" />
+
+</android.support.constraint.ConstraintLayout>
